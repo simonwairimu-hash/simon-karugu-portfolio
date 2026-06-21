@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --portfolio-bg: #121212; /* Simon's signature neutral dark */
+  --portfolio-card: #1E1E1E; /* slightly lighter neutral card */
+  --portfolio-text: #F8FAFC; /* near-white text */
+  --portfolio-muted: #94A3B8; /* slate muted text */
+  --portfolio-border: rgba(51, 65, 85, 0.6); /* Slate 700 opacity border */
+  --portfolio-accent: #38BDF8; /* Sky 400 */
+  
+  --panel-bg: rgba(30, 41, 59, 0.4); /* slate-800/40 */
+  --panel-header: rgba(15, 23, 42, 0.6); /* slate-900/60 */
+  --console-text: #CBD5E1; /* slate-300 */
+  --console-bg: rgba(2, 6, 23, 0.2); /* slate-950/20 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-portfolio-bg text-portfolio-text antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--portfolio-accent);
+    color: var(--portfolio-bg);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Custom modern scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--portfolio-bg);
+    transition: background-color 0.3s ease;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--portfolio-border);
+    border-radius: 4px;
+    border: 2px solid var(--portfolio-bg);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--portfolio-accent);
+  }
+}
+
+@layer components {
+  /* Semantic surfaces */
+  .card-surface {
+    background-color: var(--portfolio-card);
+    border: 1px solid var(--portfolio-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .panel-surface {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--portfolio-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .panel-header-surface {
+    background-color: var(--panel-header);
+    border-bottom: 1px solid var(--portfolio-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .console-surface {
+    background-color: var(--console-bg);
+    color: var(--console-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .border-theme {
+    border-color: var(--portfolio-border);
+    transition: border-color 0.3s ease;
+  }
+}
+
+/* Custom handwritten note styling */
+.handwritten-note {
+  background-color: #FEF08A; /* warm yellow */
+  color: #1C1917; /* dark stone text */
+  border-radius: 6px 16px 8px 12px;
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid #FACC15;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.handwritten-note:hover {
+  transform: rotate(0.5deg) scale(1.01);
+  box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.25);
+}
