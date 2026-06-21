@@ -38,7 +38,6 @@ const Resume = () => {
     {
       degree: "Diploma in Information Communication Technology (ICT)",
       school: "Kiambu National Polytechnic",
-      period: "2021 - 2024",
       location: "Kiambu, Kenya",
       details: "Specialized in Computer Networking, Database Management Systems, and IT Operations. Developed custom inventory tracking models as part of coursework projects."
     }
@@ -313,7 +312,6 @@ const Resume = () => {
                         </p>
                       </div>
                       <div className="sm:text-right font-mono text-portfolio-accent print:text-slate-600 font-semibold shrink-0">
-                        <div>{edu.period}</div>
                         <div className="text-[10px] font-normal text-slate-600 dark:text-slate-400 mt-0.5">{edu.location}</div>
                       </div>
                     </div>
