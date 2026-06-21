@@ -86,7 +86,7 @@ const Certifications = () => {
             transition={{ delay: 0.15 }}
             className="text-sm text-portfolio-muted leading-relaxed font-light mt-3 max-w-2xl"
           >
-            A collection of professional credentials, course achievements, and technology certifications verifying my capabilities in logistics tracking systems, network administration, and databases.
+            A collection of professional credentials, course achievements, and technology certifications verifying my capabilities and skills.
           </motion.p>
           
           <motion.div
